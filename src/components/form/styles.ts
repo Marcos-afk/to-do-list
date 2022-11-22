@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
   button: {
     width: 52,
     height: 52,
-    backgroundColor: THEME.COLORS.BLUE,
+    backgroundColor: THEME.COLORS.BLUE_DARK,
     borderRadius: 6,
     marginLeft: 6,
     justifyContent: 'center',

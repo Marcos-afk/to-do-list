@@ -6,8 +6,6 @@ export const styles = StyleSheet.create({
     width: '90%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    fontFamily: THEME.FONT_FAMILY.BOLD,
-    fontSize: THEME.FONT_SIZE.LG,
     marginTop: 32,
   },
   tasksContainer: {
@@ -16,9 +14,13 @@ export const styles = StyleSheet.create({
   },
   createdTaskText: {
     color: THEME.COLORS.BLUE,
+    fontFamily: THEME.FONT_FAMILY.BOLD,
+    fontSize: THEME.FONT_SIZE.LG,
   },
   completedTaskText: {
     color: THEME.COLORS.PURPLE_DARK,
+    fontFamily: THEME.FONT_FAMILY.BOLD,
+    fontSize: THEME.FONT_SIZE.LG,
   },
   tasksValue: {
     color: THEME.COLORS.GRAY_200,

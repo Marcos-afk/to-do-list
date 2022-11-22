@@ -11,7 +11,7 @@ export const TasksList = ({ tasks, setTasks }: TasksListProps) => {
       data={tasks}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
-        <Task id={item.id} content={item.content} isFinished={item.isFinished} setTasks={setTasks} />
+        <Task id={item.id} content={item.content} isFinished={item.isFinished} setTasks={setTasks} tasks={tasks} />
       )}
       showsVerticalScrollIndicator={false}
       ListEmptyComponent={<EmptyList />}
