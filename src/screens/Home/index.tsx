@@ -22,7 +22,7 @@ export const Home = () => {
     <TouchableWithoutFeedback onPress={customStyle}>
       <View style={styles.container}>
         <Header />
-        <Form useCustomStyle={useCustomStyle} setUseCustomStyle={setUseCustomStyle} />
+        <Form useCustomStyle={useCustomStyle} setUseCustomStyle={setUseCustomStyle} setTasks={setTasks} />
         <Labels createdTasks={createdTasks} completedTasks={completedTasks} />
         <TasksList tasks={tasks} />
       </View>
