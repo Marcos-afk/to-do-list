@@ -35,6 +35,7 @@ export const Form = ({ useCustomStyle, setUseCustomStyle, setTasks }: FormProps)
         placeholderTextColor={THEME.COLORS.GRAY_300}
         value={content}
         onChangeText={setContent}
+        maxLength={200}
       />
 
       <TouchableOpacity style={styles.button} onPress={handleTaskAdd}>

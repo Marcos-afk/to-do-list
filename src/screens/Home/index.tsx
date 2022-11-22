@@ -24,7 +24,7 @@ export const Home = () => {
         <Header />
         <Form useCustomStyle={useCustomStyle} setUseCustomStyle={setUseCustomStyle} setTasks={setTasks} />
         <Labels createdTasks={createdTasks} completedTasks={completedTasks} />
-        <TasksList tasks={tasks} />
+        <TasksList tasks={tasks} setTasks={setTasks} />
       </View>
     </TouchableWithoutFeedback>
   );
