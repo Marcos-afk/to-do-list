@@ -1,7 +1,13 @@
 # Todo list
 
 <div align="center">
-	<img src="./assets/app.png" width="1000"alt="app"/>
+	<img src="./assets/app.png" width="800"alt="app"/>
+</div>
+
+## :dart: App em uso
+
+<div align="center">
+	<img src="./assets/app-in-use.gif" width="800"alt="app"/>
 </div>
 
 ## :dart: Objetivo
