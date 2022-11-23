@@ -4,12 +4,6 @@
 	<img src="./assets/app.png" width="800"alt="app"/>
 </div>
 
-## :dart: App em uso
-
-<div align="center">
-	<img src="./assets/app-in-use.gif" width="800"alt="app"/>
-</div>
-
 ## :dart: Objetivo
 
 Desafio 01 do conteúdo estudado nas aulas do Chapter I da trilha de React Native do Bootcamp Ignite da Rocketseat.
