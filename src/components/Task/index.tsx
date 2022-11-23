@@ -7,19 +7,19 @@ import { THEME } from '../../theme';
 
 export const Task = ({ id, content, isFinished, setTasks, tasks }: TaskComponentProps) => {
   const removeTask = (id: string) => {
-    Alert.alert('Tarefa removida', 'Tarefa removida com sucesso!');
     setTasks((prevState) => prevState.filter((task) => task.id !== id));
+    Alert.alert('Tarefa removida', 'Tarefa removida com sucesso!');
   };
 
   const handleTaskRemove = (id: string) => {
     Alert.alert('Remoção de tarefa', 'Deseja remover essa tarefa ?', [
       {
-        text: 'Sim',
-        onPress: () => removeTask(id),
-      },
-      {
         text: 'Não',
         style: 'cancel',
+      },
+      {
+        text: 'Sim',
+        onPress: () => removeTask(id),
       },
     ]);
   };

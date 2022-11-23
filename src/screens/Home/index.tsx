@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Keyboard, TouchableWithoutFeedback, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { SafeAreaView } from 'react-native';
 import { Header } from '../../components/Header';
 import { styles } from './styles';
 import { TaskProps } from '../../components/Task/TaskProps';
@@ -8,24 +8,32 @@ import { Labels } from '../../components/Labels';
 import { TasksList } from '../../components/TasksList';
 
 export const Home = () => {
-  const [useCustomStyle, setUseCustomStyle] = useState(false);
   const [completedTasks, setCompletedTasks] = useState(0);
   const [createdTasks, setCreatedTasks] = useState(0);
   const [tasks, setTasks] = useState<TaskProps[]>([]);
 
-  const customStyle = () => {
-    setUseCustomStyle(false);
-    Keyboard.dismiss();
-  };
+  useEffect(() => {
+    let amountCreated = 0;
+    let amountCompleted = 0;
+
+    tasks.map((task) => {
+      if (!task.isFinished) {
+        amountCreated += 1;
+      } else {
+        amountCompleted += 1;
+      }
+    });
+
+    setCreatedTasks(amountCreated);
+    setCompletedTasks(amountCompleted);
+  }, [tasks]);
 
   return (
-    <TouchableWithoutFeedback onPress={customStyle}>
-      <View style={styles.container}>
-        <Header />
-        <Form useCustomStyle={useCustomStyle} setUseCustomStyle={setUseCustomStyle} setTasks={setTasks} />
-        <Labels createdTasks={createdTasks} completedTasks={completedTasks} />
-        <TasksList tasks={tasks} setTasks={setTasks} />
-      </View>
-    </TouchableWithoutFeedback>
+    <SafeAreaView style={styles.container}>
+      <Header />
+      <Form setTasks={setTasks} />
+      <Labels createdTasks={createdTasks} completedTasks={completedTasks} />
+      <TasksList tasks={tasks} setTasks={setTasks} />
+    </SafeAreaView>
   );
 };

@@ -15,11 +15,11 @@ export const styles = StyleSheet.create({
     padding: 16,
     fontSize: THEME.FONT_SIZE.LG,
     fontFamily: THEME.FONT_FAMILY.REGULAR,
+    color: THEME.COLORS.GRAY_100,
   },
   inputOnFocus: {
     borderWidth: 1,
     borderColor: THEME.COLORS.PURPLE_DARK,
-    color: THEME.COLORS.GRAY_100,
   },
   button: {
     width: 52,
